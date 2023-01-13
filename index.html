@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>Flex Box Demo</title>
+  <meta name="viewport" content="width=device-width">
+<style>
+body {
+  font-family: verdana;
+  margin: 0;
+}
+
+nav {
+  background-color: dodgerBlue;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > a {
+  color: cornSilk;
+}
+
+nav a.selected {
+  font-size: 1.5rem;
+}
+
+#columns {
+  display: flex;
+}
+#columns div {
+  padding: 3rem;
+}
+#columns div:first-child {
+  background-color: red;
+  flex: 1;
+}
+
+#columns div:last-child {
+  background-color: green;
+  flex: 3;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: cornSilk;
+}
+
+#container div {
+  border: solid 1px black;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+#container div.sm {
+  width: 25px;
+  height: 25px;
+}
+
+#container div.lg {
+  width: 75px;
+  height: 75px;
+}
+
+@media (max-width:600px){
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav > a {
+    margin: 1rem;
+  }
+}
+</style>
+  </head>
+  <body>
+    <nav>
+      <a href='#'>Home</a>
+      <a href='#'>About</a>
+      <a href='#' class='selected'>Products</a>
+      <a href='#'>Contact Us</a>
+    </nav>
+    <div id='columns'>
+      <div>Red 1/4</div>
+      <div>Green 3/4</div>
+    </div>
+    <div id='container'>
+      <div class='sm'></div>
+      <div></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+      <div class='sm'></div>
+      <div></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+      <div class='sm'></div>
+      <div></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+      <div class='lg'></div>
+    </div>
+  </body>
+</html>
